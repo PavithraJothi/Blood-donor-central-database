@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>delete</title>
+<script type="text/javascript">
+function validate()
+{
+	var phoneno=form.phoneno.value;
+
+	if(phoneno=="")
+		{
+		window.alert("enter phoneno");
+	return false;
+		}
+	
+	}
+
+</script>
+</head>
+<body background-color="pink">
+<form name="form" method="post" action="deleterequest.jsp" onsubmit="return validate()">
+<center><h2>DELETE READ REQUEST</h2></center>
+<br><br><br><br><br>
+<b><center>PHONE NUMBER OF THE REQUESTED DONOR:</b>
+<input type="text" name="phoneno">
+</center>
+
+<br><br>
+<center>
+<input type="submit" value="DELETE REQUEST">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="CLEAR"></center>
+<br/><br/>
+<center><a href="view.html">GO BACK</a></center>
+</form>
+</body>
+</html>

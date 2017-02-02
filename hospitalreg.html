@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>HospitalRegistration</title>
+        
+       <style>
+       body{
+       height:100%;
+   width:100%;
+   background-image:url("https://www.clipartsgram.com/image/1116146294-login-page-background-image-112.jpg");/*your background image*/  
+   background-repeat:no-repeat;/*we want to have one single image not a repeated one*/  
+   background-size:cover;
+   }
+   table {
+    width: 15%;
+    margin-left: auto;
+    margin-right: auto;
+}
+   </style>
+   <script type="text/javascript">
+function validate()
+{
+	 var name=reg.name.value;
+	 var pat1=/^\w{5,15}\w*$/;
+	 var address=reg.address.value;
+	 var pat2=/^\w{5,15}\w*$/;
+	 var city=reg.city.value;
+	 var pat3=/^\w{5,15}\w*$/;
+	 var state=reg.state.value;
+	 var pat4=/^\w{5,15}\w*$/;
+	 var phoneno=reg.phoneno.value;
+	 var pat5=/^\d{11}$/;
+	 var username=reg.username.value;
+	 var pat6=/^\w{5,15}\w*$/;
+     var password=reg.password.value;
+     var pat7=/^\w*(\d\w*[a-z A-Z]| [a-z A-Z]\w *\d)\w*$/;
+     if(name==" " ||  address==" " || city==" " || state==" " || phoneno==" "|| username==" "|| password==" ")
+		{
+    	 window.alert(" Please fill all the required details");
+    	 return false;
+		}
+    	 if(!pat1.test(name))
+     { 
+		window.alert("enter Hospital name");
+	    return false;
+     }	
+     
+     if(!pat2.test(address)) 
+     { 
+		window.alert("enter address");
+ 	    return false;
+     }	
+     if(!pat3.test(city)) 
+     { 
+		window.alert("enter city");
+ 	    return false;
+     }
+     if(!pat4.test(state)) 
+     { 
+		window.alert("enter state ");
+ 	    return false;
+     }	
+     if(!pat5.test(phoneno)) 
+     { 
+		window.alert("enter phoneno ");
+ 	    return false;
+     }	
+     
+     if(!pat6.test(username)) 
+     { 
+		window.alert("enter username ");
+ 	    return false;
+     }	
+     if(!pat7.test(password)) 
+     { 
+		window.alert("enter password");
+ 	    return false;
+     }	
+}
+</script>
+    </head>
+    <body>
+        <form method="post" name="reg" onsubmit="return validate()" action="hospit1.jsp">
+        <font color="pink" size=5>
+            <center>
+            <table cellpadding="2">
+                <thead>
+                    <tr>
+                        <th colspan="2"><b><i><u>ENTER INFORMATION HERE</u></i></b></th>
+                    </tr>
+                </thead>
+                <tbody>
+                
+                
+                    <tr>
+                        <td>Hospital Name</td>
+                        <td><input type="text" name="name" ></td>
+                    </tr>
+        
+                    <tr>
+                        <td>Address</td>
+                        <td><input type="text" name="address" ></td>
+                    </tr>
+                    
+                   <tr>
+                        <td>City</td>
+                        <td><input type="text" name="city" ></td>
+                    </tr> 
+                    <tr>
+                        <td>State</td>
+                        <td><input type="text" name="state" ></td>
+                    </tr>
+                    <tr>
+                        <td>Phone number</td>
+                        <td><input type="text" name="phoneno"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>User Name</td>
+                        <td><input type="text" name="username"></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input type="password" name="password"  ></td>
+                    </tr>
+                   
+                   <tr>
+                        <td><input type="submit" value="Submit" /></td>
+                        <td><input type="reset" value="Reset" /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><b>ALREADY REGISTERED!! <a href="hospitallogin.html">Login Here</b></a></td>
+                    </tr>
+                </tbody>
+            </table>
+            </center>
+            </font>
+        </form>
+    </body>
+</html>

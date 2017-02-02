@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>feedback</title>
+<style>
+body{height:100%;
+   width:100%;
+   background-image:url("/Blood donor central db/WebContent/images (6).jpg");/*your background image*/  
+   background-repeat:no-repeat;/*we want to have one single image not a repeated one*/  
+   background-size:cover;
+   }
+   table {
+    width: 21%;
+    margin-left: auto;
+    margin-right: auto;
+}
+</style>
+<script type="text/javascript">
+function validate()
+{
+ var phoneno=otherdonor.phoneno.value;
+ var pat1=/^\d{10,11}$/;
+ var reasonforrequest=otherdonor.reasonforrequest.value;
+ var pat2=/^[a-z |A-Z]{4,50}$/;
+ var bloodgroupreq=otherdonor.bloodgroupreq.value;
+ var pat3=/^(A|B|AB|O)[+-]$/;
+ var locsearch=otherdonor.locsearch.value;
+ var pat4=/^\w{5,15}\w*$/;
+ if(phoneno==" " || reasonforrequest==" " || bloodgroupreq==" " || locsearch==" ")
+ {
+	 window.alert("fill all the required details");
+	 return false;
+ }	 
+ if(!pat1.test(phoneno))
+ { 
+		window.alert("enter phone number");
+	    return false;
+ }	
+ if(!pat2.test(reasonforrequest)) 
+ { 
+		window.alert("enter reason for request");
+	    return false;
+ }	
+ if(!pat3.test(bloodgroupreq)) 
+ { 
+		window.alert("enter blood group req");
+	    return false;
+ }	
+ if(!pat4.test(locsearch)) 
+ { 
+		window.alert("enter location to be searched");
+	    return false;
+ }	
+}
+</script>
+    </head>
+    <body bgcolor="pink">
+        <form method="post" name="otherdonor" onsubmit="return validate()" action="request.jsp">
+        
+         <center>
+           
+            <table  width="20%" cellpadding="2" align="center">
+                <thead>
+                    <tr>
+                        <th colspan="2"><b>REQUEST TO ANOTHER BLOOD DONOR</b></th>
+                    </tr>
+                </thead>
+                <tbody>
+            
+                    <tr>
+                   <br><br><br>
+                        <td> 
+                        <b>PHONE NUMBER:</b></td></div>
+                        <td><input type="text" name="phoneno" value="" /></td>
+                   
+                    
+                    </tr>
+                    
+                        <tr>
+                        <td><b>REASON FOR REQUEST:</b></td>
+                         <td><input type="text" name="reasonforrequest" value="" />
+                      
+                        </td>
+                
+                    </tr>
+                    
+                    <tr>
+                   <br><br><br>
+                        <td> 
+                        <b>BLOOD GROUP REQUIRED:</b></td></div>
+                        <td><input type="text" name="bloodgroupreq" value="" /></td>
+                   
+                    
+                    </tr>
+                    
+                    <tr>
+                   <br><br><br>
+                        <td> 
+                        <b>LOCATION TO BE SEARCHED:</b></td></div>
+                        <td><input type="text" name="locsearch" value="" /></td>
+                   
+                    
+                    </tr>
+                    
+                    <tr>
+                        <td><input type="submit" value="SUBMIT REQUEST" /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><br><br><br><br><br><br><br><br><br><br><b> <a href="donorlist.html">Go Back</b></a></td>
+                    </tr>
+                
+                    
+                </tbody>
+            </table>
+            </center>
+        </form>
+      
+    </body>
+</html>
+                   
+														
+		

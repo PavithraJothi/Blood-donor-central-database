@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Hospital login</title>
+<style>
+body{height:100%;
+   width:100%;
+   background-image:url("http://webcomindia.biz/blog/wp-content/uploads/2015/06/image1.jpeg");/*your background image*/  
+   background-repeat:no-repeat;/*we want to have one single image not a repeated one*/  
+   background-size:cover;
+   }
+   a:hover
+   {
+   color:pink;
+   }
+   table {
+    width: 21%;
+    margin-left: auto;
+    margin-right: auto;
+}
+</style>
+<script type="text/javascript">
+function validate()
+{
+ var username=hospital.id.value;
+ var pat1=/^\w{5,15}\w*$/;
+ var password=hospital.password.value;
+ var pat2=/^\w*(\d\w*[a-z A-Z]| [a-z A-Z]\w *\d)\w*$/;
+ if(!pat1.test(username))
+ { 
+		window.alert("enter hospital id");
+	    return false;
+ }	
+ if(!pat2.test(password)) 
+ { 
+		window.alert("enter password");
+	    return false;
+ }	
+}
+</script>
+    </head>
+   
+
+  
+
+    <body>
+   
+        
+        <form method="post" name="hospital" onsubmit="return validate()" action="hospit.jsp">
+        <font color="pink" size=5>
+         <center>
+           
+            <table  width="20%" cellpadding="2" align="center">
+                <thead>
+                    <tr>
+                        <th colspan="2"><b>HOSPITAL LOGIN</b></th>
+                    </tr>
+                </thead>
+                <tbody>
+            
+                    <tr>
+                   <br><br><br>
+                        <td> 
+                        <b>HOSPITAL ID:</b></td></div>
+                        <td><input type="text" name="username" value="" /></td>
+                   
+                    
+                    </tr>
+                    
+                    <tr>
+                        <td><b>HOSPITAL PASSWORD:</b></td>
+                        <td><input type="password" name="password" value="" /></td>
+                
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="LOGIN" /></td>
+                        <td><input type="reset" value="CLEAR" /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><br><br><br><br><br><br><br><br><br><br><b>NOT A HOSPITAL? <a href="welcome.html">GO BACK</b></a></td>
+                    	<td colspan="2"><br><br><br><br><br><br><br><br><br><br><b>NOT YET REGISTERED? <a href="hospitalreg.html">CLICK HERE</b></a></td>
+                    </tr>
+                
+                    
+                </tbody>
+            </table>
+            </center>
+            </font>
+        </form>
+      
+    </body>
+</html>

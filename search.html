@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>search</title>
+<style>
+body{height:100%;
+   width:100%;
+   background-image:url("/Blood donor central db/WebContent/images (6).jpg");/*your background image*/  
+   background-repeat:no-repeat;/*we want to have one single image not a repeated one*/  
+   background-size:cover;
+   }
+<script type="text/javascript">
+function validate()
+{
+ var area=find.area.value;
+ var pat1=/^\w{5,15}\w*$/;
+ if(!pat1.test(area))
+ { 
+		window.alert("enter location");
+	    return false;
+ }	
+} 
+</style>
+</head>
+<body bgcolor="pink">
+    <form method="get" name="find" onsubmit="return validate()" action="searchdonordetails.jsp">
+        
+         <center>
+           
+            <table  width="20%" cellpadding="2" align="center">
+                <thead>
+                    <tr>
+                        <th colspan="2"><b>BROWSE FOR BLOOD DONORS</b></th>
+                    </tr>
+                </thead>
+                <tbody>
+            
+                    <tr>
+                   <br><br><br>
+                        <td> 
+                        <b>AREA:</b></td></div>
+                        <td><input type="text" name="area" value="" /></td>
+                  </tr>
+                  <br/><br/>
+                  <tr>
+                        <td><input type="submit" value="SEARCH" /></td>
+                        <td><input type="reset" value="CLEAR" /></td>
+                    </tr>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>feedback</title>
+<style>
+body{height:100%;
+   width:100%;
+   background-image:url("/Blood donor central db/WebContent/images (6).jpg");/*your background image*/  
+   background-repeat:no-repeat;/*we want to have one single image not a repeated one*/  
+   background-size:cover;
+   background-color:pink;
+   }
+   table {
+    width: 21%;
+    margin-left: auto;
+    margin-right: auto;
+}
+</style>
+<script type="text/javascript">
+function validate()
+{
+ var dateofblooddonation=feedback.dateofblooddonation.value;
+ var pat1=/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/;
+ var healthreport=feedback.healthreport.value;
+ var pat2=/^[a-z |A-Z]{4,50}$/;
+ var phoneno=feedback.phoneno.value;
+ var pat3=/^\d{10}$/;
+ if(dateofblooddonation==" " || healthreport==" ")
+ {
+	 window.alert("fill all the required details");
+	 return false;
+ }	 
+ if(!pat1.test(dateofblooddonation))
+ { 
+		window.alert("enter date");
+	    return false;
+ }	
+ if(!pat2.test(healthreport)) 
+ { 
+		window.alert("enter healthreport");
+	    return false;
+ }	
+ if(!pat3.test(phoneno)) 
+ { 
+		window.alert("enter phoneno");
+	    return false;
+ }	
+}
+</script>
+    </head>
+    <body>
+        <form method="post" name="feedback" onsubmit="return validate()" action="donorfeedback.jsp">
+        
+         <center>
+           
+            <table  width="20%" cellpadding="2" align="center">
+                <thead>
+                    <tr>
+                        <th colspan="2"><b>DONOR FEEDBACK</b></th>
+                    </tr>
+                </thead>
+                <tbody>
+            
+                    <tr>
+                   <br><br><br>
+                        <td> 
+                        <b>DATE OF BLOOD DONATION:</b></td></div>
+                        <td><input type="date" name="dateofblooddonation" value="" /></td>
+                   
+                    
+                    </tr>
+                    
+                        <tr>
+                        <td><b>HEALTH REPORT:</b></td>
+                         <td><input type="text" name="healthreport" value="" />
+                      
+                        </td>
+                
+                    </tr>
+                    
+                    <tr>
+                   <br><br><br>
+                        <td> 
+                        <b>PHONE NUMBER:</b></td></div>
+                        <td><input type="number" name="phoneno" value="" /></td>
+                   
+                    
+                    </tr>
+                    
+                    <tr>
+                        <td><center><input type="submit" value="SUBMIT FEEDBACK" /></center></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><br><br><br><br><br><br><br><br><br><br><b> <a href="donorlist.html">Go Back</b></a></td>
+                    </tr>
+                
+                    
+                </tbody>
+            </table>
+            </center>
+        </form>
+      
+    </body>
+</html>
+                   
+														
+		

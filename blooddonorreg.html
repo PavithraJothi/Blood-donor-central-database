@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>BloodDonorRegistration</title>
+        
+       <style>
+       body{
+       height:100%;
+   width:100%;
+   background-image:url("https://www.clipartsgram.com/image/1116146294-login-page-background-image-112.jpg");/*your background image*/  
+   background-repeat:no-repeat;/*we want to have one single image not a repeated one*/  
+   background-size:cover;
+   }
+   table {
+    width: 15%;
+    margin-left: auto;
+    margin-right: auto;
+}
+   </style>
+   <script type="text/javascript">
+function validate()
+{
+	 var fname=reg.fname.value;
+	 var pat1=/^\w{5,15}\w*$/;
+	 var lname=reg.lname.value;
+	 var pat2=/^\w{5,15}\w*$/;
+	 var address=reg.address.value;
+	 var pat3=/^\w{5,15}\w*$/;
+	 var city=reg.city.value;
+	 var pat4=/^\w{5,15}\w*$/;
+	 var state=reg.state.value;
+	 var pat5=/^\w{5,15}\w*$/;
+	 var phoneno=reg.phoneno.value;
+	 var pat6=/^\d{10}$/;
+	 var bloodgroup=reg.bloodgroup.value;
+	 var pat7=/^(A|B|AB|O)[+-]$/;
+	 var email=reg.email.value;
+	 var pat1=/^\w{5,25}\w*$/;
+	 var username=reg.username.value;
+	 var pat9=/^\w{5,15}\w*$/;
+     var password=reg.password.value;
+     var pat10=/^\w*(\d\w*[a-z A-Z]| [a-z A-Z]\w *\d)\w*$/;
+     if(fname==" " ||  address==" " || city==" " || state==" " || phoneno==" " || bloodgroup==" " || email==" "|| username==" "|| password==" ")
+		{
+    	 window.alert(" Please fill all the required details");
+    	 return false;
+		}
+    	 if(!pat1.test(fname))
+     { 
+		window.alert("enter firstname");
+	    return false;
+     }	
+     if(!pat2.test(lname)) 
+     { 
+		window.alert("enter lastname ");
+ 	    return false;
+     }	
+     if(!pat3.test(address)) 
+     { 
+		window.alert("enter address");
+ 	    return false;
+     }	
+     if(!pat4.test(city)) 
+     { 
+		window.alert("enter city");
+ 	    return false;
+     }
+     if(!pat5.test(state)) 
+     { 
+		window.alert("enter state ");
+ 	    return false;
+     }	
+     if(!pat6.test(phoneno)) 
+     { 
+		window.alert("enter phoneno ");
+ 	    return false;
+     }	
+     if(!pat7.test(bloodgroup)) 
+     { 
+		window.alert("enter bloodgroup ");
+ 	    return false;
+     }	
+     if(!pat8.test(email)) 
+     { 
+		window.alert("enter email");
+ 	    return false;
+     }	
+     if(!pat9.test(username)) 
+     { 
+		window.alert("enter username ");
+ 	    return false;
+     }	
+     if(!pat10.test(password)) 
+     { 
+		window.alert("enter password");
+ 	    return false;
+     }	
+}
+</script>
+    </head>
+    <body>
+        <form method="post" name="reg" onsubmit="return validate()" action="blooddonor.jsp">
+        <font color="pink" size=5>
+            <center>
+            <table cellpadding="2">
+                <thead>
+                    <tr>
+                        <th colspan="2"><b><i><u>ENTER INFORMATION HERE</u></i></b></th>
+                    </tr>
+                </thead>
+                <tbody>
+                
+                
+                    <tr>
+                        <td>First Name</td>
+                        <td><input type="text" name="fname" ></td>
+                    </tr>
+                    <tr>
+                        <td>Last Name</td>
+                        <td><input type="text" name="lname"></td>
+                    </tr>
+                    <tr>
+                    <tr>
+                        <td>Gender</td>
+                        <td>Male<input type="radio" value="male" name="gender"  ></td>
+                        <td>Female<input type="radio" value="female" name="gender"  ></td>
+                    </tr>
+                    <tr>
+                        <td>Address</td>
+                        <td><input type="text" name="address" ></td>
+                    </tr>
+                    <tr>
+                   <tr>
+                        <td>City</td>
+                        <td><input type="text" name="city" ></td>
+                    </tr> 
+                    <tr>
+                        <td>State</td>
+                        <td><input type="text" name="state" ></td>
+                    </tr>
+                    <tr>
+                        <td>Phone number</td>
+                        <td><input type="text" name="phoneno" ></td>
+                    </tr>
+                    <tr>
+                        <td>Blood group</td>
+                        <td><input type="text" name="bloodgroup" ></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><input type="text" name="email" ></td>
+                    </tr>
+                    <tr>
+                        <td>User Name</td>
+                        <td><input type="text" name="username"></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input type="password" name="password"  ></td>
+                    </tr>
+                   
+                   <tr>
+                        <td><input type="submit" value="Submit" /></td>
+                        <td><input type="reset" value="Reset" /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><b>Already registered!! <a href="blooddonorlogin.html">Login Here</b></a></td>
+                    </tr>
+                </tbody>
+            </table>
+            </center>
+            </font>
+        </form>
+    </body>
+</html>
